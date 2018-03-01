@@ -20,26 +20,15 @@
     </header>
     <section class="fotos">
         <div class="contenedor">
-            <div class="thumb">
-                <a href="#">
-                    <img src="imagenes/1.jpg" alt="">
-                </a>
-            </div>
-            <div class="thumb">
-                <a href="#">
-                    <img src="imagenes/1.jpg" alt="">
-                </a>
-            </div>
-            <div class="thumb">
-                <a href="#">
-                    <img src="imagenes/1.jpg" alt="">
-                </a>
-            </div>
-            <div class="thumb">
-                <a href="#">
-                    <img src="imagenes/1.jpg" alt="">
-                </a>
-            </div>
+            
+            <?php foreach($photos as $photo): ?>
+                <div class="thumb">
+                    <a href="photo.php?id=<?php echo $photo['id'] ?>">
+                        <img src="photos/<?php echo $photo['imagen'] ?>" alt="<?php echo $photo['titulo'] ?>">
+                    </a>
+                </div>
+            <?php endforeach; ?>
+
             <div class="paginacion">
                 <a href="#" class="izquierda"><i class="fa fa-long-arrow-left"></i> Pagina Anterior</a>
                 <a href="#" class="derecha">Pagina Siguiente <i class="fa fa-long-arrow-right"></i></a>
