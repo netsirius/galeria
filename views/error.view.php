@@ -14,15 +14,10 @@
     <header>
         <div class="contenedor">
             <h1 class="titulo">
-                Sube tu foto
+                NO SE HA PODIDO CONECTAR A LA BASE DE DATOS
             </h1>
         </div>
     </header>
-    <div class="contenedor">
-        <h1 class="titulo">
-            SE HA PRODUCIDO UN ERROR AL INTENTARSUBIR LA FOTO
-        </h1>
-    </div>
     <footer>
         <p class="copyright">
             Simple galería creada como práctica de PHP
