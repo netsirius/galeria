@@ -14,16 +14,27 @@
     <header>
         <div class="contenedor">
             <h1 class="titulo">
-                Foto : 1.jpg
+                <?php 
+                    if(!empty($photo['titulo'])){
+                        echo $photo['titulo'];
+                    }else{
+                        echo $photo['imagen'];
+                    }
+                 ?>
             </h1>
         </div>
     </header>
     <div class="contenedor">
         <div class="foto">
-            <img src="imagenes/1.jpg" alt="">
+            <img src="imagenes/<?php echo $photo['imagen']; ?>" alt="">
             <p class="texto">
-                Descripción descripción descripción descripción descripción descripción descripción
-                descripción descripción descripción descripción descripción descripción descripción
+                <?php 
+                    if(!empty($photo['texto'])){
+                        echo $photo['texto'];
+                    }else{
+                        echo $photo['imagen'];
+                    }
+                ?>
             </p>
             <a href="index.php" class="regresar"><i class="fa fa-long-arrow-left"></i> Volver</a>
         </div>
