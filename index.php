@@ -2,8 +2,8 @@
 require 'functions.php';
 // cantidad de fotos por pag
 $nphotos = 8;
-// si p esta seteado, lo guardamos como un entero evitando inyección de cófigo
-$actual_page = isset($_GET['p']) ? (int)$_GET['p'] : 1;
+// si page esta seteado, lo guardamos como un entero evitando inyección de cófigo
+$actual_page = isset($_GET['page']) ? (int)$_GET['page'] : 1;
 /**
  * si es mayor a 1, traemos las paginas desde la que pertoque, en caso 
  * contrario desde la primera

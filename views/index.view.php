@@ -30,8 +30,12 @@
             <?php endforeach; ?>
 
             <div class="paginacion">
-                <a href="#" class="izquierda"><i class="fa fa-long-arrow-left"></i> Pagina Anterior</a>
-                <a href="#" class="derecha">Pagina Siguiente <i class="fa fa-long-arrow-right"></i></a>
+                <?php if ($actual_page > 1): ?>
+                    <a href="index.php?page=<?php echo $actual_page - 1 ?>" class="izquierda"><i class="fa fa-long-arrow-left"></i> Pagina Anterior</a>
+                <?php endif ?>
+                <?php if ($total_pages != $actual_page): ?>
+                    <a href="index.php?page=<?php echo $actual_page + 1 ?>" class="derecha">Pagina Siguiente <i class="fa fa-long-arrow-right"></i></a>
+                <?php endif ?>
             </div>
         </div>
     </section>
